@@ -24,3 +24,8 @@ ADD commands/make/make.utilities.inc /composer/vendor/drush/drush/commands/make/
 # Hack Drush, fix the runserver to handle image styles.
 ADD commands/runserver/runserver-prepend.php /composer/vendor/drush/drush/commands/runserver/runserver-prepend.php
 ADD commands/runserver/runserver.drush.inc /composer/vendor/drush/drush/commands/runserver/runserver.drush.inc
+
+
+ADD bootstrap.make /tmp/bootstrap.make
+# Warm the Drush caches, but then remove the release info cache.
+RUN drush make --test /tmp/bootstrap.make && rm -rf /root/.drush/cache/download/*updates.drupal.org*
