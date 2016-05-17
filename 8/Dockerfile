@@ -17,3 +17,8 @@ RUN \
   apt-get remove -y wget && \
   apt-get autoremove -y && \
   apt-get clean all
+
+# Get emails sent into a log file.
+RUN echo "sendmail_path = 'cat > /var/log/php-mail.log'" >> /usr/local/etc/php/conf.d/computerminds-email.ini
+# But stop PHP errors because of extra parameters to sendmail.
+RUN echo "mail.force_extra_parameters = ''" >> /usr/local/etc/php/conf.d/computerminds-email.ini
