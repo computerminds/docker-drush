@@ -18,6 +18,8 @@ RUN \
   apt-get autoremove -y && \
   apt-get clean all
 
+RUN drush --version
+
 # Get emails sent into a log file.
 RUN echo "sendmail_path = 'cat > /var/log/php-mail.log'" >> /usr/local/etc/php/conf.d/computerminds-email.ini
 # But stop PHP errors because of extra parameters to sendmail.
