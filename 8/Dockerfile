@@ -24,3 +24,10 @@ RUN drush --version
 RUN echo "sendmail_path = 'cat > /var/log/php-mail.log'" >> /usr/local/etc/php/conf.d/computerminds-email.ini
 # But stop PHP errors because of extra parameters to sendmail.
 RUN echo "mail.force_extra_parameters = ''" >> /usr/local/etc/php/conf.d/computerminds-email.ini
+
+
+ADD composer.json /tmp/composer.json
+# Warm the composer caches with our common config.
+RUN \
+  cd /tmp && \
+  composer install --no-dev
