@@ -19,6 +19,7 @@ RUN \
   apt-get clean all
 
 # Hack Drush, make Drush make exit early on errors.
+ADD commands/make/make.download.inc /composer/vendor/drush/drush/commands/make/make.download.inc
 ADD commands/make/make.utilities.inc /composer/vendor/drush/drush/commands/make/make.utilities.inc
 
 # Hack Drush, fix the runserver to handle image styles.
