@@ -37,5 +37,5 @@ projects[xmlsitemap][subdir] = "contrib"
 
 ; We often have mpdf
 libraries[mpdf][download][type] = "get"
-libraries[mpdf][download][url] = "https://github.com/finwe/mpdf/archive/v6.0.0.zip"
+libraries[mpdf][download][url] = "https://github.com/mpdf/mpdf/releases/download/v6.1.0/02-mPDF-v6.1.0-without-examples.zip"
 libraries[mpdf][directory_name] = "mpdf"
