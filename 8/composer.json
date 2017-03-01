@@ -17,10 +17,7 @@
     ],
     "require": {
         "composer/installers": "^1.0.21",
-        "computerminds/cm_security": "^8.1.1",
         "cweagans/composer-patches": "^1.6.0",
-        "desandro/imagesloaded": "3.1.8",
-        "desandro/masonry": "3.3.1",
         "drupal-composer/drupal-scaffold": "^1.3.1",
         "drupal/admin_toolbar": "^1.17",
         "drupal/cm_config_tools": "1.x-dev",
@@ -40,7 +37,6 @@
         "drupal/pathauto": "^1.0",
         "drupal/redirect": "^1.0",
         "drush/drush": "^8.0",
-        "enyo/dropzone": "4.2.0",
         "oomphinc/composer-installers-extender": "~1.1"
     },
     "conflict": {
