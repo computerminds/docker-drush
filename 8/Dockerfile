@@ -6,6 +6,8 @@ MAINTAINER "Steven Jones" <steven.jones@computerminds.co.uk>
 RUN mkdir -p ~/.ssh && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 # Trust alfresco for git clones.
 RUN mkdir -p ~/.ssh && ssh-keyscan -t rsa gitlab.alfresco.com >> ~/.ssh/known_hosts
+# Trust new! alfresco for git clones.
+RUN mkdir -p ~/.ssh && ssh-keyscan -t rsa git.alfresco.com >> ~/.ssh/known_hosts
 
 # Add Dockerize, as it's useful.
 RUN \
