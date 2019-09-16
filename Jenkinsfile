@@ -10,9 +10,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh "docker build -t computerminds/drush:6 6/."
-        sh "docker build -t computerminds/drush:7 7/."
-        sh "docker build -t computerminds/drush:8 8/."
+        sh "docker build --no-cache -t computerminds/drush:6 6/."
+        sh "docker build --no-cache -t computerminds/drush:7 7/."
+        sh "docker build --no-cache -t computerminds/drush:8 8/."
       }
     }
     stage('Publish') {
